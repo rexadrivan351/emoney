@@ -417,13 +417,14 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
 
     }
-
+    
     function createBalance() {
+        
         security = localStorage.getItem("password");
         firebase.auth().onAuthStateChanged((user) => {
-
+        bal = String.fromCharCode(48);
             firebase.database().ref('Balance/').push({
-                balance: 0,
+                balance: bal,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
