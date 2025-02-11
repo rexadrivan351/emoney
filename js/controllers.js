@@ -422,9 +422,9 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         
         security = localStorage.getItem("password");
         firebase.auth().onAuthStateChanged((user) => {
-        bal = String.fromCharCode(48);
+
             firebase.database().ref('Balance/').push({
-                balance: bal,
+                balance: 0,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
