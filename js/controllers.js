@@ -89,18 +89,17 @@ function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
 
 
     function register(email, password) {
-
+		
+        localStorage.setItem("username", email);
+        localStorage.setItem("password", password);
+		
         if ($scope.registerPassword !== $scope.verifyRegisterPassword) {
             document.getElementById("passwordError").classList.add('show');
             document.getElementById("passwordError").innerHTML = "Password does not match. verify your password.";
 
         }
-
-
-        localStorage.setItem("username", email);
-        localStorage.setItem("password", password);
-
-        firebase.auth().createUserWithEmailAndPassword(email, password).then(function(value) {
+		else{
+			        firebase.auth().createUserWithEmailAndPassword(email, password).then(function(value) {
             email = email.replace("@kwarta.com", "");
             Http = new XMLHttpRequest();
             url = 'https://' + server + '/register.php?username=' + email + '&password=' + password + '';
@@ -155,6 +154,10 @@ function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
 
 
         });
+
+
+
+		};
 
 
 
