@@ -593,25 +593,15 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                     });
 
 				
-                                    firebase.auth().onAuthStateChanged((user) => {
-                                        userSend = userSend.replace("@kwarta.com", "");
-                                        firebase.database().ref('Transactions/').push({
-                                            amount: userAmount,
-                                            sendto: sentFrom,
-                                            type: "recieve",
-                                            comment: comment,
-                                            user: user.uid,
-                                            createdAt: firebase.database.ServerValue.TIMESTAMP
-                                        });
-                                    });
+                                   
 					    
 
                                     /** reciever Logs **/
                                     
-					/**
+					
                                     firebase.auth().onAuthStateChanged((user) => {
                                         let gef = firebase.database().ref("Guest").orderByChild("email").equalTo(searchUser)
-                                        gef.once("child_added", function(snapshot) {
+                                        gef.on("child_added", function(snapshot) {
                                             key = Object.keys(snapshot.val());
 
                                             firebase.auth().onAuthStateChanged((user) => {
@@ -627,7 +617,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                         });
 
                                     });
-					**/
+					
                                     alert("successfully sent");
                                     }else{
                                         alert("No")
