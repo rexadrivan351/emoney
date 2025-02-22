@@ -599,12 +599,12 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                     /** reciever Logs **/
                                     
 					
-                                    firebase.auth().onAuthStateChanged((user) => {
+                                
                                         let gef = firebase.database().ref("Guest").orderByChild("email").equalTo(searchUser)
-                                        gef.on("child_added", function(snapshot) {
+                                        gef.once("child_added", function(snapshot) {
                                             key = Object.keys(snapshot.val());
 
-                                            firebase.auth().onAuthStateChanged((user) => {
+                                        
                                                 firebase.database().ref('Transactions/').push({
                                                     amount: userAmount,
                                                     sendto: sentFrom,
@@ -613,10 +613,10 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                                     user: snapshot.val().user,
                                                     createdAt: firebase.database.ServerValue.TIMESTAMP
                                                 });
-                                            });
+                                        
                                         });
 
-                                    });
+                                    
 					
                                     alert("successfully sent");
                                     }else{
@@ -3892,5 +3892,4 @@ angular
     .controller('agileBoard', agileBoard)
     .controller('draggablePanels', draggablePanels)
     .controller('ChatCtrl', ChatCtrl)
-
 
