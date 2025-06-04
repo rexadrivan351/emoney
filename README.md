@@ -1,9 +1,9 @@
 # Electronic Money
-payment industry and electronic money
+payment network and electronic money
 
 ## Solve
 
 API for shopping
-Online Store
+documentation for developers
 No *documentation!* 
 
