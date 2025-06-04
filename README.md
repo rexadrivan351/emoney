@@ -5,5 +5,5 @@ payment network and electronic money
 
 API for shopping
 documentation for developers
-No *documentation!* 
+
 
