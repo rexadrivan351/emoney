@@ -1,5 +1,5 @@
 /**
- * CABAO - Responsive Panel Theme
+ * CABAO - + Panel Theme
  * 2.0
  *
  * Custom scripts
