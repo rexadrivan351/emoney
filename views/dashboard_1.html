@@ -1,38 +1,37 @@
 <div class="row  border-bottom white-bg dashboard-header">
 
    <div class="row">
-    	<div class="col-lg-2">
-  {{username}},
-        <div>
+    	<div class="col-lg-5">
+        <div class="ibox">
            
-            <div class="ibox">
+            <div class="ibox-content">
                 <div class="row">
-                   <b>Balance:₿{{balance}}</b>
-                    
+                    <b> Balance: {{balance}}</b>
+                    <h3></h3>
                 </div>
                 <br>
-                <form class="form-vertical" ng-submit="send(this)">
+                <form class="form-horizontal" ng-submit="send(this)">
                    
 
-                    <div class="form-group">
+                    <div class="form-group"><label class="col-lg-2 control-label">Send To:</label>
 
-                        <div class="col-lg-10"><input type="text" placeholder="username" autocorrect="on" autocapitalize="none" ng-model="userSendTo"  ng-change="usernameSendTo(this)" class="form-control"> <span class="help-block m-b-none">{{UserName}} </span>
+                        <div class="col-lg-10"><input type="text" placeholder="Username" autocorrect="off" autocapitalize="none" ng-model="userSendTo"  ng-change="usernameSendTo(this)" class="form-control"> <span class="help-block m-b-none">{{UserName}}</span>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"><label class="col-lg-2 control-label">Amount</label>
 
                         <div class="col-lg-10"><input type="number" ng-model="userAmount" placeholder="Amount" class="form-control"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group"><label class="col-lg-2 control-label">Comment</label>
 
-                        <div class="col-lg-10"><textarea type="text" ng-model="userComment" placeholder="Comment" class=""></textarea></div>
+                        <div class="col-lg-10"><textarea type="text" ng-model="userComment" placeholder="(Optional)" class="form-control"></textarea></div>
                     </div>
 
                     
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
-                            <button class="btn btn-sm btn-green" type="submit">Send</button>
+                            <button class="btn btn-sm btn-white" type="submit">Send</button>
                         </div>
                     </div>
                 </form>
