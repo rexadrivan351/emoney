@@ -1,12 +1,11 @@
 # Electronic Money
-payment network and electronic money
+payment networks and electronic bank
 
 ## Solve
 
-API for shopping
+API payment
 ## Develop
 documentation
-graph
 code orientation 
-
+graph
 
