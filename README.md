@@ -1,5 +1,5 @@
 # Electronic Money
-payment networks and electronic bank
+payment network and electronic bank
 
 ## Solve
 
