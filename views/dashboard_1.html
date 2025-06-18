@@ -6,14 +6,14 @@
            
             <div class="ibox-content">
                 <div class="row">
-                    <B>Balance {{balance}} ₿</B>
-                    <h3></h3>
+                    <B>Balance: {{balance}} ₿</B>
+                    
                 </div>
                 <br>
                 <form class="form-horizontal" ng-submit="send(this)">
                    
 
-                    <div class="form-group"><label class="col-lg-2 control-label">Send To:</label>
+                    <div class="form-group"><label class="col-lg-2 control-label">Send To</label>
 
                         <div class="col-lg-10"><input type="text" placeholder="Username" autocorrect="off" autocapitalize="none" ng-model="userSendTo"  ng-change="usernameSendTo(this)" class="form-control"> <span class="help-block m-b-none">{{UserName}}</span>
                         </div>
