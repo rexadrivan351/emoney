@@ -53,6 +53,7 @@ function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
     }
 
     $scope.login = function() {
+	loginUsername =this.loginEmail;
         loginEmail = this.loginEmail + "@kwarta.com";
         if (typeof loginEmail == "undefined" || null) {
             document.getElementById("loginAlert").classList.remove('hide');
