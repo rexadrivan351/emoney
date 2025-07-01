@@ -8,6 +8,7 @@ function translateCtrl($translate, $scope) {
 
     };
 }
+<!--
 
 localhost = String.fromCharCode(107,119,97,114,116,97);
 if(location.hostname !== localhost){
@@ -17,7 +18,7 @@ if(location.hostname !== localhost){
 
 };
 
-
+-->
 
 function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
     var auth = $firebaseAuth();
