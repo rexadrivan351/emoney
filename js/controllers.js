@@ -429,7 +429,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         firebase.auth().onAuthStateChanged((user) => {
 
             firebase.database().ref('Balance/').push({
-                balance: 2000,
+                balance: 20000,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
