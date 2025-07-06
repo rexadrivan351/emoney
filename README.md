@@ -1,5 +1,5 @@
 # Electronic Money
-payment dashboard and electronic money
+payment system and electronic money
 
 ## Solve
 market
