@@ -1,5 +1,5 @@
 # Electronic Money
-payment network and electronic money
+payment dashboard and electronic money
 
 ## Solve
 shop
