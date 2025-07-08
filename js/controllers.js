@@ -305,6 +305,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                     $scope.Guestinfo = snapshot.val();
                     FullName = '' + $scope.verifyFirstName + ' ' + $scope.verifyMiddleName + ' ' + $scope.verifyLastName;
                     gender = $scope.verifyGender;
+		    age = $scope.verifyAge;
                     if ($scope.Guestinfo == null) {
                         post = firebase.database().ref('Guest/').push({
                             user: user.uid,
@@ -312,7 +313,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                             email: user.email,
                             name: FullName,
                             gender: gender,
-		            age: user.age,
+		            age: age,
                             createdAt: firebase.database.ServerValue.TIMESTAMP,
                         });
                     } else {
