@@ -285,7 +285,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                     picture: user.photoURL
                 });
 
-                $window.location = "#!/app/profile";
+                $window.location = "#!/app/dashboard_3";
 
 
             }, function(error) {
