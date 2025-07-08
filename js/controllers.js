@@ -269,6 +269,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         $scope.verifyLastName = this.verifyLastName;
         $scope.verifyGuest = this.verifyAbout;
         $scope.verifyGender = this.verifyGender;
+	$scope.verifyAge = this.verifyAge;    
 
         $scope.verifyName = '' + $scope.verifyFirstName + ' ' + $scope.verifyMiddleName + ' ' + $scope.verifyLastName;
         firebase.auth().onAuthStateChanged(function(user) {
@@ -311,6 +312,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                             email: user.email,
                             name: FullName,
                             gender: gender,
+		            age: user.age,
                             createdAt: firebase.database.ServerValue.TIMESTAMP,
                         });
                     } else {
@@ -434,6 +436,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                 user: user.uid,
                 userinfo: user.displayName,
                 security: security,
+		age:user.age,
             });
         });
 
