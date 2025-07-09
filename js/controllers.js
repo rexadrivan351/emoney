@@ -1,3 +1,5 @@
+exchangeApiKey = "8e6774a328ad68e99d2704954362f195";
+
 
 
 function translateCtrl($translate, $scope) {
