@@ -1,5 +1,23 @@
-exchangeApiKey = "8e6774a328ad68e99d2704954362f195";
+endpoint = 'latest'
+access_key = '8e6774a328ad68e99d2704954362f195';
 
+// get the most recent exchange rates via the "latest" endpoint:
+$.ajax({
+    url: 'https://api.exchangeratesapi.io/v1/' + endpoint + '?access_key=' + access_key,
+    dataType: 'jsonp',
+    success: function(json) {
+
+        // exchange rata data is stored in json.rates
+        console.log("rates",json.rates.GBP);
+
+        // base currency is stored in json.base
+        console.log("base",json.base);
+
+        // timestamp can be accessed in json.timestamp
+        console.log(json.timestamp);
+
+    }
+});
 
 
 function translateCtrl($translate, $scope) {
