@@ -283,13 +283,13 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
 
 
-        
+        createBalance():
         $scope.verifyFirstName = this.verifyFirstName;
         $scope.verifyMiddleName = this.verifyMiddleName;
         $scope.verifyLastName = this.verifyLastName;
         $scope.verifyGuest = this.verifyAbout;
         $scope.verifyGender = this.verifyGender;
-	$scope.verifyAge = this.verifyAge;    
+	    $scope.verifyAge = this.verifyAge;    
 
         $scope.verifyName = '' + $scope.verifyFirstName + ' ' + $scope.verifyMiddleName + ' ' + $scope.verifyLastName;
         firebase.auth().onAuthStateChanged(function(user) {
@@ -412,7 +412,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
     getUserInviteCode();
 
     getUserInfo();
-    createBalance();
+    
     $scope.count = 0;
 
     $scope.usernameSendTo = function(a) {
