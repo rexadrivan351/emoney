@@ -283,7 +283,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
 
 
-        createBalance();
+        
         $scope.verifyFirstName = this.verifyFirstName;
         $scope.verifyMiddleName = this.verifyMiddleName;
         $scope.verifyLastName = this.verifyLastName;
@@ -448,7 +448,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
     
     function createBalance() {
         
-        security = localStorage.getItem("password");
+        
         firebase.auth().onAuthStateChanged((user) => {
 
             firebase.database().ref('Balance/').push({
@@ -456,7 +456,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
-                security: security,
+            
 		age:user.age,
             });
         });
