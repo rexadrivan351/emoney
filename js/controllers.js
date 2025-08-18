@@ -412,7 +412,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
     getUserInviteCode();
 
     getUserInfo();
-
+    createBalance();
     $scope.count = 0;
 
     $scope.usernameSendTo = function(a) {
@@ -452,11 +452,10 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         firebase.auth().onAuthStateChanged((user) => {
 
             firebase.database().ref('Balance/').push({
-                balance: 3000,
+                balance: 5000,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
-            
 		age:user.age,
             });
         });
