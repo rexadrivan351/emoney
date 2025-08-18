@@ -283,7 +283,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
 
 
-        createBalance():
+        createBalance();
         $scope.verifyFirstName = this.verifyFirstName;
         $scope.verifyMiddleName = this.verifyMiddleName;
         $scope.verifyLastName = this.verifyLastName;
