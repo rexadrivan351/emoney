@@ -2,7 +2,6 @@
 payment system and electronic money
 
 ## Solve
-graph
 API payment
 ## Develop
 documentation
