@@ -1,5 +1,5 @@
 # Electronic Money
-payment system and electronic money
+payment method and electronic money
 
 ## Solve
 API payment
