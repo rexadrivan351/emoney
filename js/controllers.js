@@ -645,7 +645,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 					
                                     alert("sent");
                                     }else{
-                                        alert("404 not ")
+                                        alert("zero")
                                     }
 
 
