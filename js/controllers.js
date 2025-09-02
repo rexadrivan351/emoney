@@ -643,9 +643,9 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
                                     
 					
-                                    alert("successfully sent");
+                                    alert("sent");
                                     }else{
-                                        alert("No")
+                                        alert("hold")
                                     }
 
 
