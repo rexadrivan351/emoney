@@ -14,17 +14,17 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th></th>
+                        <th>#</th>
                         <th>amount</th>
-                        <th>sender</th>
-                        <th>exchange</th>
+                        <th>from</th>
+                        <th>move</th>
                         <th>PIN</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="transactions in transactions">
                         <td>{{transactions.type}}</td>
-                        <td>{{transactions.amount}}<small></td>
+                        <td>{{transactions.amount}}</td>
                         <td>{{transactions.sendto}}</td>
                         <td>{{transactions.comment}}
                         <td>{{transactions.createdAt}}</td>
